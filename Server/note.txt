@@ -1,0 +1,42 @@
+1/ npm init --
+2//////////// npm i express
+
+ const { request } = require("express")
+  const app=express()
+  const port=5000;
+
+ app.listen(port,()=>{
+         console.log("listening on port")
+  })
+
+3/////////// npm install nodemon
+ "start":"nodemon index.js"
+
+4///////// npm install pg > db.js
+
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    host: 'localhost',
+    user: 'postgres',
+    port: 5432,
+    database: "bookdb",
+    password: '1553683'
+})
+module.exports = pool;
+
+5/go to sql db make db manually
+
+6/ CREATE TABLE orderstatus (
+    id VARCHAR(1000) PRIMARY KEY,
+    name VARCHAR(2000),
+    img VARCHAR(2000),
+    quantity VARCHAR(100),
+    shipping VARCHAR(10),
+    price VARCHAR(1000),
+    location VARCHAR(255),
+    email VARCHAR(400),
+    customername VARCHAR(300),
+    status VARCHAR(20)
+);
+7/ intall uuid
